@@ -34,9 +34,13 @@
 #LIBS		=
 
 # uncomment the following 3 lines for linux (tested on 2.0.33/redhat 5)
-CC		= gcc
-CFLAGS		= -g -DREADLINE -I/usr/local/include
-LIBS		= -L/usr/local/lib -lreadline -lhistory -lncurses
+#CC		= gcc
+#CFLAGS		= -g -DREADLINE -I/usr/local/include 
+#LIBS		= -L/usr/local/lib -lreadline -lhistory -lncurses
+# twb: the following has been tested on (kali 5.15.0-kali2-amd64)
+CC              = gcc
+CFLAGS          = -g -DREADLINE -I/usr/local/include -I/usr/include/tirpc/
+LIBS            = -L/usr/local/lib -lreadline -lhistory -lncurses -ltirpc
 
 RPCGEN		= rpcgen
 RGFLAGS		= -C
