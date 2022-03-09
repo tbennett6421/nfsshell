@@ -34,3 +34,11 @@ apt-file search rpc/rpc.h
 sudo apt-get install libtirpc-dev
 sudo apt-get install libreadline-dev
 ```
+
+After fixing the `Makefile`
+
+```sh
+make clean
+make
+./nfsshell
+```
